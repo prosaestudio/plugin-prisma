@@ -35,7 +35,7 @@ import MiEspacio from "./pages/nexia/MiEspacio";
 import MiAprendizaje from "./pages/nexia/MiAprendizaje";
 
 // Prisma Admin — nuevo
-import AdminHome from "./pages/admin/AdminHome";
+import AdminHome from "./pages/admin/PluginAdmin";
 import DocsLibrary from "./pages/admin/DocsLibrary";
 import DocsUpload from "./pages/admin/DocsUpload";
 import DocsConnectors from "./pages/admin/DocsConnectors";

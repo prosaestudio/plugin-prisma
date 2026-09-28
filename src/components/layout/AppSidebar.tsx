@@ -42,44 +42,9 @@ type Section = { label: string; key: string; items: Item[] };
 // ADMIN — reorganizado para Prisma (gestión documental + indicadores del agente)
 const adminSections: Section[] = [
   {
-    label: "Inicio",
+    label: "Plugin",
     key: "overview",
-    items: [{ title: "Dashboard", url: "/dashboard", icon: LayoutDashboard }],
-  },
-  {
-    label: "Gestión documental",
-    key: "docs",
-    items: [
-      { title: "Biblioteca",       url: "/docs",            icon: Library },
-      { title: "Cargar / Sync",    url: "/docs/upload",     icon: UploadCloud },
-      { title: "Aprobaciones",     url: "/docs/approvals",  icon: GitPullRequest },
-      { title: "Vigencia & duplicados", url: "/docs/health", icon: Stethoscope },
-    ],
-  },
-  {
-    label: "Indicadores",
-    key: "insights",
-    items: [
-      { title: "Consultas & tópicos",   url: "/insights/topics",     icon: BarChart3 },
-      { title: "Salud documental",      url: "/insights/doc-health", icon: FileWarning },
-      { title: "Actividad por sector",  url: "/insights/activity",   icon: Activity },
-      { title: "Aprendizaje & onboarding", url: "/insights/learning", icon: GraduationCap },
-    ],
-  },
-  {
-    label: "Herramientas",
-    key: "tools",
-    items: [
-      { title: "Simulador del agente", url: "/simulator", icon: Sparkles },
-    ],
-  },
-  {
-    label: "Gobernanza",
-    key: "gobernanza",
-    items: [
-      { title: "Roles & permisos", url: "/governance/roles",   icon: Users2 },
-      { title: "Reportes",         url: "/governance/reports", icon: FileDown },
-    ],
+    items: [{ title: "Prisma MCP", url: "/dashboard", icon: LayoutDashboard }],
   },
 ];
 
