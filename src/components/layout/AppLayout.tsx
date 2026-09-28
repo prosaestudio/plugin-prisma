@@ -1,23 +1,11 @@
 import { Outlet } from "react-router-dom";
-import { SidebarProvider } from "@/components/ui/sidebar";
-import { AppSidebar } from "./AppSidebar";
-import { TopBar } from "./TopBar";
-import { FloatingAssistant } from "@/components/FloatingAssistant";
 
 export function AppLayout() {
-
   return (
-    <SidebarProvider defaultOpen={true}>
-      <div className="min-h-screen flex w-full bg-background">
-        <AppSidebar />
-        <div className="flex-1 flex flex-col min-w-0">
-          <TopBar />
-          <main className="flex-1 overflow-auto p-6 lg:p-8">
-            <Outlet />
-          </main>
-        </div>
-        <FloatingAssistant />
-      </div>
-    </SidebarProvider>
+    <div className="min-h-screen w-full bg-background">
+      <main className="mx-auto max-w-6xl px-4 py-6 md:px-8 md:py-10">
+        <Outlet />
+      </main>
+    </div>
   );
 }
