@@ -338,8 +338,7 @@ export default function PluginAdmin() {
             <div className="mb-3">
               <img src={prismaLogo.url} alt="Prisma" className="h-8 w-auto" />
             </div>
-            <p className="text-[10px] uppercase tracking-[0.18em] opacity-60">Prisma · Infraestructura de agentes</p>
-            <p className="text-sm opacity-70 mt-2">Control central para conectar agentes de IA con WordPress y WooCommerce.</p>
+            <p className="text-sm opacity-70">Control central para conectar agentes de IA con WordPress y WooCommerce.</p>
           </div>
           <div className="text-right">
             <p className="text-[10px] uppercase tracking-[0.18em] opacity-60">Etapa actual</p>
