@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { AlertTriangle, Check, Copy, ExternalLink, ShieldAlert } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
-import prismaLogo from "@/assets/prisma-logo.svg";
+import prismaLogo from "@/assets/logo-prisma-white.png.asset.json";
 import logoClaude from "@/assets/logo-claude.svg";
 import logoCursor from "@/assets/logo-cursor.svg";
 import logoVscode from "@/assets/logo-vscode.svg";
@@ -335,9 +335,8 @@ export default function PluginAdmin() {
         <div className="absolute inset-x-0 bottom-0 h-1 bg-prisma" />
         <div className="flex items-end justify-between gap-6 flex-wrap">
           <div>
-            <div className="flex items-center gap-3 mb-3">
-              <img src={prismaLogo} alt="Prisma" className="h-9 w-9" />
-              <h1 className="font-display text-4xl font-semibold text-background">Prisma MCP</h1>
+            <div className="mb-3">
+              <img src={prismaLogo.url} alt="Prisma" className="h-8 w-auto" />
             </div>
             <p className="text-[10px] uppercase tracking-[0.18em] opacity-60">Prisma · Infraestructura de agentes</p>
             <p className="text-sm opacity-70 mt-2">Control central para conectar agentes de IA con WordPress y WooCommerce.</p>
