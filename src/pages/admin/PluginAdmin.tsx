@@ -126,12 +126,16 @@ function Conectar() {
           <p className="text-xs text-muted-foreground mb-3">Elige tu cliente; adaptamos las instrucciones.</p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
             {CLIENTES.map((c) => (
-              <button key={c} onClick={() => setCliente(c)}
+              <button key={c.nombre} onClick={() => setCliente(c.nombre)}
                 className={cn("flex items-center gap-3 rounded-xl border p-3 text-left transition-colors",
-                  cliente === c ? "border-foreground bg-muted/50" : "border-border hover:bg-muted/30")}>
-                <span className="w-8 h-8 rounded-lg bg-foreground text-background text-[10px] font-semibold grid place-items-center">{c.slice(0, 2).toUpperCase()}</span>
-                <span className="text-sm flex-1">{c}</span>
-                {cliente === c && <Check className="w-4 h-4" />}
+                  cliente === c.nombre ? "border-foreground bg-muted/50" : "border-border hover:bg-muted/30")}>
+                <span className="w-8 h-8 rounded-lg bg-muted/60 grid place-items-center shrink-0">
+                  {c.logo
+                    ? <img src={c.logo} alt="" className="w-5 h-5 object-contain" />
+                    : <span className="text-[10px] font-semibold text-muted-foreground">{c.nombre.slice(0, 2).toUpperCase()}</span>}
+                </span>
+                <span className="text-sm flex-1">{c.nombre}</span>
+                {cliente === c.nombre && <Check className="w-4 h-4" />}
               </button>
             ))}
           </div>
