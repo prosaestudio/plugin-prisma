@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { AlertTriangle, Check, Copy, ExternalLink, ShieldAlert } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
+import prismaLogo from "@/assets/prisma-logo.svg";
 
 const TABS = [
   { id: "resumen", label: "Resumen" },
