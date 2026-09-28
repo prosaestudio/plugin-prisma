@@ -9,6 +9,13 @@ import { AlertTriangle, Check, Copy, ExternalLink, ShieldAlert } from "lucide-re
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
 import prismaLogo from "@/assets/prisma-logo.svg";
+import logoClaude from "@/assets/logo-claude.svg";
+import logoCursor from "@/assets/logo-cursor.svg";
+import logoVscode from "@/assets/logo-vscode.svg";
+import logoWindsurf from "@/assets/logo-windsurf.svg";
+import logoGemini from "@/assets/logo-googlegemini.svg";
+import logoOpenai from "@/assets/logo-openai.svg";
+import logoGoogle from "@/assets/logo-google.svg";
 
 const TABS = [
   { id: "resumen", label: "Resumen" },
@@ -98,7 +105,16 @@ function Resumen({ go }: { go: (t: string) => void }) {
 }
 
 /* ---------- Conectar ---------- */
-const CLIENTES = ["Claude Code", "Cursor", "VS Code", "Windsurf", "Gemini CLI", "Codex", "Antigravity", "Otro cliente"];
+const CLIENTES: { nombre: string; logo: string | null }[] = [
+  { nombre: "Claude Code", logo: logoClaude },
+  { nombre: "Cursor", logo: logoCursor },
+  { nombre: "VS Code", logo: logoVscode },
+  { nombre: "Windsurf", logo: logoWindsurf },
+  { nombre: "Gemini CLI", logo: logoGemini },
+  { nombre: "Codex", logo: logoOpenai },
+  { nombre: "Antigravity", logo: logoGoogle },
+  { nombre: "Otro cliente", logo: null },
+];
 function Conectar() {
   const [cliente, setCliente] = useState("Claude Code");
   const [modo, setModo] = useState<"lectura" | "editar">("editar");
